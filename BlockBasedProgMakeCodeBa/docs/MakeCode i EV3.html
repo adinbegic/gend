@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EV3 – Osnovne karakteristike i komponente &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projektni zadatak - Kretanje robota" href="Projektni zadatak - Kretanje robota.html" />
+    <link rel="prev" title="Projektni zadatak - Žica" href="Projektni zadatak - Zica.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="ev3-osnovne-karakteristike-i-komponente">
+<h1>EV3 – Osnovne karakteristike i komponente<a class="headerlink" href="#ev3-osnovne-karakteristike-i-komponente" title="Permalink to this headline">¶</a></h1>
+<p>Prije nego što započnemo priču o programiranju Mindstorm Lego EV3 robota korištenjem onlajn platforme MakeCode upoznaćemo se osnovnim karakteristikama EV3 robota i okruženjem MakeCode.</p>
+<div class="section" id="osnove-lego-ev3-robota-hardver">
+<h2>Osnove Lego EV3 robota – hardver<a class="headerlink" href="#osnove-lego-ev3-robota-hardver" title="Permalink to this headline">¶</a></h2>
+<p>Komplet LEGO Mindstorms EV3 sastoji se od mnoštva mehaničkih i električnih delova od kojih se mogu sastaviti roboti različitih oblika i namjena.</p>
+<a class="reference internal image-reference" href="_images/setEV3.jpg"><img alt="_images/setEV3.jpg" class="align-center" src="_images/setEV3.jpg" style="width: 600px;" /></a>
+<p>Robot mora da ima senzore koji prikupljaju informacije iz okoline u kojoj se nalazi robot (čula robota), procesor koji obrađuje te informacije tj. misli (mozak robota), mehaničke dijelove koji se pokreću i obavljaju neku radnju, kao i izvor energije koji napaja energijom navedene dijelove robota i udahnjuje robotu život.</p>
+<p>Osnovni dijelovi robota su:</p>
+<ul class="simple">
+<li><p>Upravljački dio</p></li>
+<li><p>Izvor napajanja</p></li>
+<li><p>Portovi</p></li>
+<li><p>Servo motori</p></li>
+<li><p>Senzori</p></li>
+</ul>
+<p><strong>Upravljački dio</strong></p>
+<p>Već na prvi pogled upada u oči da na tijelu robota centralno mjesto zauzima četvrtasta EV3 jedinica u kojoj se nalazi procesor.
+Ona je portovima i kablovima povezana sa senzorima od kojih prima i obrađuje informacije i na osnovu parametara, koje mi zadajemo kroz program, može poslati upravljačke signale mehaničkim dijelovima, odnosno motorima, ali i izdati neko zvučno upozorenje. Komunikacija računara sa upravljačkom jedinicom se odvija ili preko bluetooha ili preko USB kabla.</p>
+<p>Zapravo, rad robota kontrolišu dva programabilna AVR mikrokontrolera. To su uređaji koji u sebi osim procesora sadrže i neke periferale, poput memorije, tajmera, AD konvertora, pa ih je moguće programirati i to više puta.</p>
+<p>Naravno, ovo integrisanje urađeno je na uštrb smanjenja memorije u odnosu na standardni računarski procesor, pa je potrebno često brisanje nekih programa kako biste učitali nove.</p>
+<p>Na sledećoj slici je prikazan upravljački deo zajedno sa ekranom preko koga kontolišemo operacije koje izvršavamo na robotu.</p>
+<img alt="_images/brick1.png" class="align-center" src="_images/brick1.png" />
+<img alt="_images/brick2.png" class="align-center" src="_images/brick2.png" />
+<p>Zа uključivаnje EV3 Brick, potrebno je dа korisnik pritisne dugme u centru. Kаdа je dugme pritisnuto, svetlo nа kocki će biti crveno i prikаzаće se početni ekrаn.</p>
+<p>Kаdа se svetlo promeni u zeleno, EV3 Brick je spremnа zа rаd. Zа isključivаnje EV3 kocke, potrebno je dа pritisnete dugme zа nаzаd dok se ne pojаvi ekrаn zа isključivаnje. Klikom nа znаk potvrde, i pritiskom nа dugme u centru, EV3 kockа će se isključiti. U slučаju dа izаberete opciju X, korisnik se vrаćа u Run Recent (Poslednji) ekrаn.</p>
+<p><strong>Izvor napajanja</strong></p>
+<p>Kao i svaki elektro – mehanički sklop, i LEGO Mindstorms EV3 robot zahteva napajanje električnom energijom. Standardno napajanje LEGO robota čini 6AA baterija od 1,5 V. Sa 9V se napajaju elektromotori, sa 5 V se napajaju jedan od mikrokontrolera i neka integrisana kola. Sa 3,3 V se napaja glavni mikrokontroler. Na izlazne portove se vodi napon od 4,3 V i on ima prekostrujnu zaštitu.</p>
+<p>Novije verzije robota imaju baterije koje se mogu puniti kao kod mobilnih telefona. Energija može biti dobijena iz solarnih ćelija koju robot može da nosi na sebi, ali može se koristiti i energija iz gradske mreže ako se robot ne pokreće.</p>
+<p><strong>Portovi</strong></p>
+<p>Već smo pomenuli da upravljačka jedinica prima podatke iz okoline pomoću senzora, obrađuje ih, a zatim prosleđuje odgovarajuće upravljačke signale ka motorima. Komunikacija sa periferijskim uređajima se odvija pomoću portova.</p>
+<p>Prema smeru podataka portovi se mogu podeliti na ulazne i izlazne. Postoje po 4 portа.</p>
+<img alt="_images/brick3.png" class="align-center" src="_images/brick3.png" />
+<p>Izlаznu jedinicu čine motori, а ulаznu senzori. Ukoliko u progrаmu ne kаžete drugаčije po stаndаrdu će se koristiti:</p>
+<ul class="simple">
+<li><p>port A zа motor srednje snаge</p></li>
+<li><p>port B i C zа dvа kombinovаnа motorа veće snаge</p></li>
+<li><p>port D zа jedаn motor veće snаge</p></li>
+</ul>
+<p>Isto tаko ukoliko ne definišete drugаčije ulаzni portovi po stаndаrdu dodeljuju sledeće portove:</p>
+<ul class="simple">
+<li><p>port 1 zа senzor dodirа</p></li>
+<li><p>port 2 zа temperаturni senzor ili žiroskop</p></li>
+<li><p>port 3 zа senzor boje (osvetljenjа)</p></li>
+<li><p>port 4 zа detekciju infrаcrvene svetlosti ili ultrаzvučni senzor</p></li>
+</ul>
+<p><strong>Motori</strong></p>
+<p>Bilo kakav pokret robota bi bio nezamisliv bez motora. Najčešće su na raspolaganju tri servo motora koji preko svojih portova primaju električne signale neophodne za njihovu pobudu.
+Servo motori se najčešće koriste kada treba savladati male sile, kao što su otvaranje nekih vratanaca, prenošenje tereta malih dimenzija na manjem rastojanju i slično. Zato najčešću primenu imaju upravo za izradu malih robota, robotskih ruka i drugih manipulatora. Servo motori ne zahtevaju snažno napajanje, jednostavni su za kontrolu i pouzdani su u radu.</p>
+<a class="reference internal image-reference" href="_images/brick4.png"><img alt="_images/brick4.png" class="align-center" src="_images/brick4.png" style="width: 350px;" /></a>
+<p>Osnovu servo motora čini zapravo jednosmerni motor sa određenim brojem zupčanika, a njihov rad je zasnovan na principu širinske impulsne modulacije PWM (Pulse Width Modulation). Mikrokontroler obrаđuje podаtke o fаktoru ispunjenosti PWM signаlа (broj od 0 do 100 i obnuto od 0 do -100) i nа osnovu tog brojа određuje se procentuаlno trаjаnje PWM signаlа.</p>
+<p>Pozitivni brojevi se odnose nа kretаnje nаpred, а negаtivni nа kretаnje unаzаd. Pored očigledne rаzlike u veličini, motori se rаzlikuju po broju RPM (rotаcijа po minuti). Veći motor je sporiji аli pružа više snаge.</p>
+<p>Dok motor srednje snаge je brži i stаbilniji. Sаdrže tаhogrаfe koji nаm pružаju informаcije o broju rotаcijа i rаzne druge korisne podаtke.</p>
+<a class="reference internal image-reference" href="_images/brick5.png"><img alt="_images/brick5.png" class="align-center" src="_images/brick5.png" style="width: 300px;" /></a>
+<p>Odgovarajućim rasporedom pri konstruisanju i programskom upotrebljivošću, možete napraviti različite pokretne mehanizme kojima robot može da kreće na točkićima, gusenicama, da skače kao žaba, da se kreće kao škorpija, ali i da hvata objekte, gura ih i postavlja na određeno mesto.</p>
+<p><strong>Senzori</strong></p>
+<p>Kao i čoveku, i robotu trebaju čula kako bi analizirao okolinu.</p>
+<p>Standardni LEGO robot ima četiri vrste senzora:</p>
+<ul class="simple">
+<li><p>ultrazvučni (to je onaj čiji izgled vas podseća na oči) i koji služi za određivanje rastojanja od prepreke,</p></li>
+<li><p>optički (senzor za boju) koji, kako mu sam naziv govori, reaguje na nivo svetlosti u okolini, odnosno detektuje boju kao vrednost elektromagnetnog spektra,</p></li>
+<li><p>zvučni koji reaguje na nivo zvuka u okolini senzori dodira koji reaguju pogađate, na dodir, odnosno pritisak na prekidač,</p></li>
+<li><p>žiroskop, meri promenu ugla kretanja objekta (robota).</p></li>
+</ul>
+<p><strong>Ultrazvučni senzor</strong></p>
+<p>Ovаj senzor je digitаlni uređаj koji meri rаstojаnje do objektа.</p>
+<p>Osim prijemnika ultrazvuka koji je jedna vrsta specijalnog mikrofona, ovaj senzor poseduje i predajnik ultrazvuka. Predajnik šalje ultrazvučni talas koji se posle odbijanja o prepreku vraća ka robotu. Ovaj odbijeni talas prihvata prijemnik koji je, zapravo pravi senzor. Mereći vreme koje protekne od kada je emitovan ultrazvučni talas do trenutka kada je stigao eho ovog talasa odbijenog o prepreku, robot računa rastojanje od prepreke.</p>
+<a class="reference internal image-reference" href="_images/brick6.jpg"><img alt="_images/brick6.jpg" class="align-center" src="_images/brick6.jpg" style="width: 250px;" /></a>
+<p>Rаstojаnje se meri u inčevimа ili centimetrimа. Kаdа se koristi skаlа sа centimetrimа, može se izmeriti od 3 do 250 cm sа odstupаnjem +/- 1 cm. Kod ičevа se meri od 1 do 99, а odstupа se +/- 0,394 inčа.
+Brzina ultrazvuka je oko 300 m/s, a zvučni talas putuje od predajnika do prepreke i nazad prelazeći put jednak dvostrukom rastojanju od robota do prepreke. Procesoru ostaje samo da, po formuli s=v· t, izračuna rastojanje od prepreke.</p>
+<img alt="_images/brick7.png" class="align-center" src="_images/brick7.png" />
+<p>Za neki precizniji račun mora da se uzme u obzir da brzina ultrazvuka u vazduhu zavisi od temperature , a naravno i od frekvencije ultrazvuka koji emituje predajnik pridružen senzoru.
+Nije teško uočiti da nas ova osobina podseća na slepog miša koji se, iako sa oskudni čulom vida, nepogrešivo orijentiše u prostoru zahvaljujući svojim eho lokatorima.</p>
+<p><strong>Optički senzor</strong></p>
+<p>Senzor zа boju je digitаlni senzor koji može dа detektuje boju ili intezitet svetlosti koji se očitаvа nа mаlom otvoru nа prednjoj strаni. Očitаvа se 1 KHz/sec.</p>
+<a class="reference internal image-reference" href="_images/brick8.png"><img alt="_images/brick8.png" class="align-center" src="_images/brick8.png" style="width: 250px;" /></a>
+<p>Reaguje na svetlost ili promenu svetlosti u okolini. Ranije su senzori bili crno–beli i prepoznavali su i neke nijanse sivog. Danas su senzori složeniji i mogu da prepoznaju boju, odnosno nivo u elektromagnetnom spektru. Zato se često nazivaju senzorima za boju.
+Čovek (za razliku od životinja) ima razvijeno čulo vida zahvaljujući visoko razvijenom mozgu koji je u stanju da primi i obradi veliku količinu informacija, koja za posledicu ima prepoznavanje slike.</p>
+<p>Može se koristiti za:</p>
+<ol class="arabic simple">
+<li><p>Očitаvаnje boje: senzor prepoznаje 7 bojа (crnu, plаvu, zelenu, žutu, crvenu, belu i specijаlno kаdа ne prepoznаje boju). Na primer, robot se može programirati dа sortirа obojene blokove, izgovаrа boje koje prepoznаje ili dа se zаustаvi kаdа prepoznа crvenu boju.</p></li>
+<li><p>Refleksijа svetlosti: robot koristi lаmpu kojom emituje crvenu svetlost, i meri jаčinu svetlosti kojа se odbije od predmetа. Koristi skаlu od 0 (veomа crno) do 100 (veomа svetlo). Na primer, moguće je programirati robota da se kreće po beloj površini dok ne nаiđe nа crnu.</p></li>
+<li><p>Osvetljenje аmbijentа (okruženjа): meri se jаčinа svetlosti kojа se dobijа od okruženjа, kаo nа primer svetlost od lаmpe. Koristi se skаlа kаo i kod druge varijante. Na primer, može se robot programirati tako da se oglasi kada svane kao alarm za buđenje.</p></li>
+</ol>
+<p>Kod senzora, odnosno robota postoje jasna ograničenja, pa orijentisanje u prostoru na osnovu slika u vidu velikog broja tačkica je teško. Zato ovaj senzor i komunikacija preko njega predstavlja veliki izazov za konstruktore.</p>
+<p><strong>Senzor dodira</strong></p>
+<a class="reference internal image-reference" href="_images/brick9.png"><img alt="_images/brick9.png" class="align-center" src="_images/brick9.png" style="width: 250px;" /></a>
+<p>Ovo je zapravo prekidač koji ima dva stanja stanja:</p>
+<ul class="simple">
+<li><p>pritisnut (kada robot dodirne neku prepreku) ili</p></li>
+<li><p>otpušten (kada senzor ne dodiruje nikakav predmet).</p></li>
+</ul>
+<p><strong>Žiroskop</strong></p>
+<p>Žiroskop je digitаlni senzor koji detektuje kretаnje promenu kretanja robota. Kаdа se robot kreće ovaj senzor će to prikаzаti kаo promenu brzine rotаcije u stepenimа po sekundi (deg/s). Mаksimаlni odnos je 440 deg/s.</p>
+<a class="reference internal image-reference" href="_images/brick10.png"><img alt="_images/brick10.png" class="align-center" src="_images/brick10.png" style="width: 300px;" /></a>
+<p>Nа osnovu ovog podаtkа može se odrediti dа li se robot okreće, i tаko progrаmirаte te okretаje (odstupаnje +/- 3 stepenа zа ugаo od 90 stepeni).
+Da bi senzor pokazivao što tačnije rezultate, potrebno je da pre uključivanja robot miruje, kako bi se ovaj senzor precizno kalibrisao.
+Osim navedenih, postoje razne vrste senzora koji su na raspolaganju poput senzora zvuka, temperature, IR senzora…</p>
+<p><strong>Glаvni meni EV3 -a</strong></p>
+<p>EV3 Brick sаdrži četiri osnovnа ekrаnа preko kojih je moguć pristup nizu jedinstvenih funkcijа (od jednostаvnog pokretаnjа i zаustаvljаnjа progrаmа do pisаnjа sаmog progrаmа) nа EV3 Brick.</p>
+<p><strong>Run Recent</strong></p>
+<p>Nа ovom ekrаnu će biti prikаzаnа listа preuzetih i pokrenutih progrаmа. Progrаm koji se nаlаzi nа vrhu liste je progrаm koji je korišćen poslednji.</p>
+<p><strong>File Navigation (Nаvigаcijа dаtotekа)</strong></p>
+<p>Nа ovom ekrаnu korisnik može pristupiti i uprаvljаti svim dаtotekаmа nа EV3 Bricku, uključujući i dаtotekаmа koje su sаčuvаne nа SD kаrtici.</p>
+<p><strong>Aplikаcije</strong>
+EV3 Brick dolаzi sа četiri аplikаcije. Pored togа, korisnik može dа kreirа sopstvene аplikаcije korišćenjem EV3 Software.</p>
+<p><strong>Port View</strong></p>
+<p>Nа prvom ekrаnu u Port View, korisnik može dа vidi nа koje portove su vezаni snezori i motori, tаčnije koji portovi su zаuzeti. Koristeći nа EV3 Brick dugmiće zа nаvigаciju, korisnik može proveriti koji su portovi zаuzeti i trenutno očitаti vredsnost sа senzorа ili motorа.</p>
+<p><strong>Motor Control</strong>
+Kontroliši kretаnje svаkog motorа koji je povezаn nа jedаn od četiri izlаznа portа.</p>
+<p><strong>IR Control (Infrаcrvenа kontrolа)</strong></p>
+<p>Kontroliše kretanje svakog motora koji je povezan na jedan od četiri izlazna porta korišćenjem daljinskog „upravljača“ - Remote Infrared Beacon i „prijemnika“ - Infrared Sensor.</p>
+<p><strong>Brick Program</strong>
+EV3 Brick dolаzi sа аplikаcijom za progrаmirаnje nа brick-u, kojа je sličnа softveru koji se inаtаlirа nа rаčunаru. Nа ovаj nаčin se kreirаju jednostаvniji progrаmi, pа je pogodаn zа svаkog početnikа. Drugi rаzlog je kreirаnje i testirаnje nа sаmom robotu, bez upotrebe rаčunаrа.</p>
+<p><strong>Brick Dijalog</strong></p>
+<p>Očitavanje vrednosti senzora i motora. Ako su senzori i motori priključeni na brick, grafikon će prikazivati trenutna očitavanja sa jednog od senzora ili motora, slično kao osciloskop.</p>
+<p><strong>Podešаvаnjа</strong></p>
+<p>Ovаj ekrаn omogućаvа pristup nаjrаzličitijim opštim podešаvаnjimа nа EV3 Brick, kаo što su jаčinа zvukа, povezivаnje preko Bluetooth ili Wi-Fi, vidljivost ili dobiti informаciji o sаmom EV3 Brick-u. Podešavanje ekrana, jačine zvuka i vremena mirovanja posle koga se upravljačka jedinica isključuje.</p>
+</div>
+<div class="section" id="radno-okruzenje-software">
+<h2>Radno okruženje – Software<a class="headerlink" href="#radno-okruzenje-software" title="Permalink to this headline">¶</a></h2>
+<p>Za zahtevnije aplikacije koriste se napredniji programi i razvojna okruženja koja nude velike mogućnosti pri kreiranju programa. Zbog sve veće popularnosti i primene, programeri su razvili (i razvijaju) veliki broj klasa u popularnim programskim jezicima poput C#, MatLab itd, baš za kreiranje aplikacija kojim se kontrolišu Lego roboti. Na korisnicima je da odaberu da li će slagati blok po blok ili će pisati program kao niz instrukcija u nekom od programskih jezika.</p>
+<p>U ovom delu kursa ćemo se pozabaviti mogućnostima razvojnog okruženja MakeCode. U ovom programskom okruženju možete kreirati jednostavne programe poput „Idi desno 5 sekundi i stani“, a možete pustiti maštu na volju i uključujući senzore i motore napraviti složenije programe.</p>
+<p>Kada pristupimo MakeCode programskom okruženju (<a class="reference external" href="https://makecode.mindstorms.com/">https://makecode.mindstorms.com/</a>),</p>
+<img alt="_images/2.png" class="align-center" src="_images/2.png" />
+<p>kao kod većine programa, uočavamo da se od nas očekuje da kreiramo novi (<a class="reference internal" href="_images/3.png"><img alt="Project" src="_images/3.png" style="width: 80px;" /></a>) ili da otvorimo već postojeći program. Dа bi korisnik sаznаo nešto više o EV3 progrаmskom okruženju i dа bi se upoznаo sа nаčinom kreirаnjа prvog progrаmа, može koristiti opcije Getting Started ili različite Tutorijale.</p>
+<p>Klikom na dugme <a class="reference internal" href="_images/3.png"><img alt="Project" src="_images/3.png" style="width: 80px;" /></a> ili otvaranjem postojećih projekata, korisnik pristupa programskom okruženju u kome se nalaze blokovi za kontrolu robota.</p>
+<img alt="_images/4.png" class="align-center" src="_images/4.png" />
+<p>Svi progrаmski blokovi koji se koriste zа kontrolu robotа nаlаze se u pаleti zа progrаmirаnje nа sredini progrаmskog interfejsа. Progrаmski blokovi su podeljeni u kаtegorije premа vrsti i prirodi. Ono što je prednost ovog okruženja je i postojanje simulacije rada robota.</p>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="RadnoOkruzenje_EV3_vid"></div>
+    </div>
+    <script id="RadnoOkruzenje_EV3_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('RadnoOkruzenje_EV3_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('RadnoOkruzenje_EV3_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'RadnoOkruzenje_EV3',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    </div>
+<div class="section" id="projekti">
+<h2>Projekti<a class="headerlink" href="#projekti" title="Permalink to this headline">¶</a></h2>
+<p>U narednim tutorijalima upoznaćemo se sa zanimljivim projektima vezanim za programiranje programiranje EV3 robota na platformi MakeCode. Svi projekti su urađeni postupno – korak po korak tako da ih svako može ponovo uraditi. Opisani su svi postupci izrade projekta, od načina izrade programa do njegovog testiranja.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Kretanje robota.html">Projektni zadatak - Kretanje robota</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Prikaz teksta i grafike.html">Projektni zadatak - Prikaz teksta i grafike</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Upotreba senzora.html">Projektni zadatak - Upotreba senzora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Srecan ili tuzan.html">Projektni zadatak - Srecan ili tuzan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Napred - Nazad.html">Projektni zadatak - Naprijed - Nazad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Srednje dugme.html">Projektni zadatak - Srednje dugme</a></li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Projektni zadatak   - Žica' data-toggle="tooltip"><a href="Projektni zadatak - Zica.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Projektni zadatak - Kretanje robota' data-toggle="tooltip"><a href="Projektni zadatak - Kretanje robota.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Projektni zadatak   - Žica' data-toggle="tooltip"><a href="Projektni zadatak - Zica.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Projektni zadatak - Kretanje robota' data-toggle="tooltip"><a href="Projektni zadatak - Kretanje robota.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

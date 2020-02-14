@@ -1,0 +1,75 @@
+Blokovi kategorije Basic
+========================
+
+U kategoriji |Basic| se nalaze blokovi za izvršavanje (pokretanje) programa, kao i blokovi za prikaz brojeva, teksta ili slika.
+
+Vrijeme je da napravimo program za prikazivanje pozdravne poruke „Hello!“.
+
+Da bismo prikazali pozdravnu poruku (na simulatoru ili displeju Micro:bit-a), potrebno je da iz kategorije |Basic|, u prostoru za programiranje (radnoj površini) prevučemo blok |showstring| u blok |onstart| . Klikom na polje za unos teksta unosimo željenu poruku „Hello!“.
+
+.. |Basic| image:: ../_images/_imageMicroBit/s2.png
+.. |onstart| image:: ../_images/_imageMicroBit/s20.png
+.. |showstring| image:: ../_images/_imageMicroBit/p6.png
+
+Konačan izgled programa za prikazivanje pozdravne poruke „Hello!“:
+
+.. image:: ../_images/_imageMicroBit/p5.png
+      :align: center
+
+Da bismo testirali program imamo dvije mogućnosti:
+
+- da ga pokrenemo u simulatoru klikom na dugme |play| .
+
+- da ga prebacimo na Micro:bit. Da bismo program prebacili na Micro:bit treba da ga prikačimo na računar korištenjem USB kabla. Klikom na dugme |download| preuzimate .hex fajl na vaš računar.
+
+.. |play| image:: ../_images/_imageMicroBit/p3.png
+.. |download| image:: ../_images/_imageMicroBit/p4.png
+      :width: 200px
+
+Za testiranje programa koristićemo simulator. Klikom na dugme |play| program se izvršava, prikazuje se pozdravna poruka „Hello!“.
+
+**Zadatak.** Kreirajte program kojim će se poruka “Hello!” prikazivati besonačno puta.
+**Mala pomoć:** Blok |forever| je blok u okviru koga će se naredbe izvršavati beskonačan broj puta. Njegovo izvršavanje nikada se ne prekida samostalno. Prekida se klikom na dugme za prestanak rada programa (Stop dugme).
+
+Vaše rješenje možete uporediti sa našim: https://makecode.microbit.org/_9Cw5d6Czda1d
+
+
+.. |forever| image:: ../_images/_imageMicroBit/s1.png
+
+
+U okviru kategorije |Basic| nalaze se i blokovi za prikaz definisanih sličica |showicons| ili prikaz sličica koje korisnik može da kreira uključivanjem dioda na Led ekranu (|showleds|).
+
+
+.. |showicons| image:: ../_images/_imageMicroBit/p7.png
+.. |showleds| image:: ../_images/_imageMicroBit/s12.png
+
+
+**Zadatak.** Želiš da napraviš program u kome se prikazuje sretno lice na ekranu.
+
+Vaše rešenje možete uporediti sa našim: https://makecode.microbit.org/_CAdaFfKsY46a
+
+
+.. mchoice:: L1Z1
+    :answer_a: Blok  on start.
+    :answer_b: Blok  forever.
+    :feedback_a: Odgovor nije tačan. Blok onstart je jedan od osnovnih blokova, i blokovi u okviru njega se izvršavaju samo jednom dok se program ne zvrši.
+    :feedback_b: Bravo! Blok forever je blok u okviru koga će se naredbe izvršavati beskonačan broj puta. Njegovo izvršavanje nikada se ne prekida samostalno. Prekida se klikom na dugme za prestanak rada programa (Stop dugme |stop|)..
+    :correct: b
+
+    Koji blok za pokretanje programa treba da koristiš da bi se naizmenično mijenjale slike praznog i punog kvadrata?
+
+U kategoriji |Basic| pored gore navedenih blokova nalaze se i blokovi za prikaz brojčane vrijednosti |shownumber|, ali i blokovi za usporavanje rada programa |pause|, kod vremenski interval predstavljen je u milisekundama 1000ms je 1 sekunda, kao i blok za brisanje ekrana |clearall|.
+
+.. |shownumber| image:: ../_images/_imageMicroBit/15.png
+.. |pause| image:: ../_images/_imageMicroBit/s39.png
+.. |clearall| image:: ../_images/_imageMicroBit/s14.png
+.. |stop| image:: ../_images/_imageMicroBit/p2.png
+
+**Zadatak.** Koristeći primjer iz gornjeg pitanja o naizmjeničnom mijenjanju slika kvadrata pokušaj da usporiš promjenu slika za 2 sekunde.
+**Mala pomoć:** Koristi blok |pause| .
+
+Proveri naše rešenje: https://makecode.microbit.org/_F5h5UKD2Vgau
+
+**Dodatni zadatak.** Potrebno je uključiti 3/5 LED dioda na Micro:bit. Prikaz uključenih LED dioda mora da bude jedinstven!
+
+Vaše rešenje uporedite sa jednim od mogućih rešenja: https://makecode.microbit.org/_29YWXrLHg22U

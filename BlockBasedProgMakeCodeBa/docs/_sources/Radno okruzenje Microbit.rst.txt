@@ -1,0 +1,40 @@
+Radno okruzenje Microbit
+========================
+
+Radno okruženje pokrećemo preko brauzera pokretanjem stranice https://makecode.microbit.org. Ovaj online editor daje mogućnost programiranja u JavaScript-u ili u grafičkom (blokovskom) programiranju gde se naredbe slažu tehnikom „drag and drop“.
+
+Radno okruzenje Microbit
+::::::::::::::::::::::::
+
+Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je kategoriju (2) u kome se nalaze grupisane naredbe (blokovi). Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.
+
+.. image:: ../_images/_imageMicroBit/2.png
+      :align: center
+
+Kategoriju se sastoji od različitih kategorija koje mogu sadržati blokove različitih namena. Blok „on start” je jedan od osnovnih blokova, i on se izvršava samo jednom po pokretanju na simulatoru ili Micro:bit-u.
+U MakeCode, programi su sačinjeni od različitih i međusobno povezanih blokova. Blokovi naredbi su podeljeni po kategorijama.
+
+.. image:: ../_images/_imageMicroBit/3_.png
+      :align: center
+
+Ime kategorije (npr. ``Music``) upućuje korisnika na vrste naredbi (blokova) koje se u toj kategoriji mogu naći. Svi blokovi jedne kategorije su iste boje.
+Svaki blok prevlačimo na radnu površinu, a zatim se oni nadovezuju u zavisnosti od programa koji se izrađuje.
+Kada se klikne desnim klikom miša na blok dobija se padajući kategoriju u kome se nalaze opcije za kreiranje duplikata (``Duplicate``), dodavanje komenatar (``Add Comment``), brisanje bloka (``Delete Block``) i opcije pomoću koje se otvara deo sa informacijama za dodatnu pomoć oko pojedinih blokova (``Help``).
+
+.. image:: ../_images/_imageMicroBit/4_.png
+      :align: center
+
+Projekti
+::::::::
+
+U narednim tutorijalima upoznaćemo se sa zanimljivim projektima vezanim za programiranje Micro:bit-a na platformi MakeCode. Svi projekti su urađeni postupno – korak po korak tako da ih svako može ponovo uraditi. Opisani su svi postupci izrade projekta, od načina pravljenja uređaja do izrade programa i njegovog testiranja.
+
+   .. toctree::
+      :maxdepth: 2
+
+      Projektni zadatak - Narukvica.rst
+      Projektni zadatak - Raspevane vocke.rst
+      Projektni zadatak - Semafor.rst
+      Projektni zadatak - Cuvar kuca (Alarm).rst
+      Projektni zadatak - Ventilator.rst
+      Projektni zadatak - Zica.rst

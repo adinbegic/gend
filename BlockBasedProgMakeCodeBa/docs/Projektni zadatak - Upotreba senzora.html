@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projektni zadatak - Upotreba senzora &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projektni zadatak - Srecan ili tuzan" href="Projektni zadatak - Srecan ili tuzan.html" />
+    <link rel="prev" title="Projektni zadatak - Prikaz teksta i grafike" href="Projektni zadatak - Prikaz teksta i grafike.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="projektni-zadatak-upotreba-senzora">
+<h1>Projektni zadatak - Upotreba senzora<a class="headerlink" href="#projektni-zadatak-upotreba-senzora" title="Permalink to this headline">¶</a></h1>
+<p><strong>Upotreba senzora dodira</strong></p>
+<p>Najpre ćemo programirati jednostavno kretanje robota sve dok senzor dodira ne dotaknemo rukom. Cilj ovog programa je da se robot kreće sve dok se ne dodirne senzor rukom.</p>
+<img alt="_images/17_.png" class="align-center" src="_images/17_.png" />
+<p>Na osnovu postavke zadatka robot se kreće pravo, da bi to uradili prevlačimo blok <img alt="pravo" src="_images/6.png" /> (robot se kreće pravo).</p>
+<p>Zatim, se iz kategorije <img alt="senzor" src="_images/221.png" /> izabere blok <img alt="Pause" src="_images/231.png" />. Iz padajuće liste bloka biramo opciju 1 koja predstavlja port na kome je vezan senzor dodira.
+Zatim, se bira opcija pritisnuto (pressed), koja predstavlja stanje senzora dodira. (Kada ruka dodirne senzor).
+A zatim, na osnovu uslova zadatka, robot treba da se zaustavi, tako što izaberemo blok <img alt="Stop" src="_images/141.png" />.
+Na taj način robot se zaustavio.</p>
+<p>Izgled programa:</p>
+<img alt="_images/24.png" class="align-center" src="_images/24.png" />
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="SenzorDodira_vid"></div>
+    </div>
+    <script id="SenzorDodira_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('SenzorDodira_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('SenzorDodira_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'SenzorDodira',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p>Priključite EV3 Brick na računar pomoću USB kabla i klikom na dugme <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a> preuzmite .uf2 fajl na vaš računar. Prevlačenjem fajla na EV3 on je spreman za rad.</p>
+<p><strong>Upotreba senzora boje</strong></p>
+<p>Senzor za boje je digitalni senzor koji može da detektuje boju ili intenzitet svetlosti koja ulazi kroz mali prozor na prednjoj strani sezora. Ovaj senzor se može koristiti na tri različita načina:</p>
+<ul class="simple">
+<li><p>Color Mode,</p></li>
+<li><p>Reflected Light Intensity Mode (Intenzitet reflektovane svetlosti), i</p></li>
+<li><p>Ambient Light Intensity Mode (Intenzitet ambijentalnog osvetljenja).</p></li>
+</ul>
+<p>U Color Mode-u, Color senzor prepoznaje sedam boja - crna, plava, zelena, žuta, crvena, bela, i braon i plus bez boje:</p>
+<img alt="_images/24_.png" class="align-center" src="_images/24_.png" />
+<p>Ova sposobnost da razlikuje boje znači da robot može biti programiran da razvrsta obojene kugle ili blokove, da govori imena boja koje su detektovane, ili da zaustavi akciju kada vidi crveno.</p>
+<img alt="_images/271.png" class="align-center" src="_images/271.png" />
+<p>U Reflected Light Intensity Mode-u, Color senzor meri intenzitet svetlosti koja se reflektuje. Senzor koristi opciju dark (veoma tamno) I light (veoma svetlo). To znači da robot može biti programiran da se kreće na beloj površini dok se crna linija ne detektuje, ili da interpretira kodiranu boju lične karte.</p>
+<p>U Ambient Light Intensity Mode-u, Color senzor meri jačinu svetlosti koja ulazi kroz prozor iz okruženja, kao što je sunčeva svetlost ili snop baterijske lampe. Senzor koristi opciju dark (veoma tamno) I light (veoma svetlo). To znači da robot može biti programiran da pokrene alarm kada sunce izlazi ujutro, ili da zaustavi akciju ako se svetla ugase.</p>
+<img alt="_images/281.png" class="align-center" src="_images/281.png" />
+<p>Upotrebu senzora boje demonstriraćemo kreiranjem programa pomoću koga se robot kreće sve dok ne vidi zelenu boju. Kada registuje zelenu boju robot se zaustavlja.</p>
+<p>Na osnovu postavke zadatka robot treba da se kreće pravo. Kretanje robota pravo, postižemo prevlačenjem bloka <img alt="pravo" src="_images/6.png" /> robot se kreće pravo).
+Zatim, se iz kategorije <img alt="senzor" src="_images/221.png" /> izabere blok <img alt="PauseColor" src="_images/291.png" />. Iz padajuće liste bloka biramo opciju 3 koja predstavlja port na kome je vezan senzor boje. Zatim, se iz padajućeg menija <img alt="Boja" src="_images/301.png" /> bira boja, klikom na željenu boju (u našem slučaju zelena). A zatim, na osnovu uslova zadatka, robot treba da se zaustavi, tako što izaberemo blok <img alt="Stop" src="_images/141.png" />. Na taj način robot se zaustavio.</p>
+<p>Kod programa i izgled simulacije (robot se kreće, sve dok ne vidi zelenu boju):</p>
+<img alt="_images/313233.png" class="align-center" src="_images/313233.png" />
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="SenzorBoje_vid"></div>
+    </div>
+    <script id="SenzorBoje_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('SenzorBoje_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('SenzorBoje_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'SenzorBoje',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p>Priključite EV3 Brick na računar pomoću USB kabla i klikom na dugme <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a> preuzmite .uf2 fajl na vaš računar. Prevlačenjem fajla na EV3 on je spreman za rad.</p>
+<p><strong>Upotreba ultrazvučnog senzora</strong></p>
+<p>Upotrebu ultrazvučnog senzora demonstriraćemo kreiranjem programa tako da se robot kreće sve dok ne naiđe na prepreku.</p>
+<p>Na osnovu postavke zadatka robot treba da se kreće pravo. Kretanje robota pravo, postižemo prevlačenjem bloka <img alt="pravo" src="_images/6.png" /> (robot se kreće pravo).</p>
+<p>Zatim, se iz kategorije <img alt="senzor" src="_images/221.png" /> izabere blok <img alt="ultra" src="_images/38.png" />. Iz padajuće liste bloka biramo opciju <code class="docutils literal notranslate"><span class="pre">4</span></code> koja predstavlja port na kome je vezan ultrazvučni senzor.
+Iz padajućeg menija <img alt="meni" src="_images/39.png" /> biramo ociju <code class="docutils literal notranslate"><span class="pre">near</span></code> (u našem slučaju zelena). Kako na osnovu uslova zadatka, robot treba da se zaustavi, tako što izaberemo blok <img alt="Stop" src="_images/141.png" />. Na taj način robot se zaustavio.</p>
+<p>Kod programa i izgled simulacije (robot se kreće, sve dok ne vidi predmet):</p>
+<img alt="_images/353637.png" class="align-center" src="_images/353637.png" />
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="SenzorDaljine_vid"></div>
+    </div>
+    <script id="SenzorDaljine_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('SenzorDaljine_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('SenzorDaljine_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'SenzorDaljine',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p>Priključite EV3 Brick na računar pomoću USB kabla i klikom na dugme <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a> preuzmite .uf2 fajl na vaš računar. Prevlačenjem fajla na EV3 on je spreman za rad.</p>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Projektni zadatak - Prikaz teksta i grafike' data-toggle="tooltip"><a href="Projektni zadatak - Prikaz teksta i grafike.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Projektni zadatak - Srecan ili tuzan' data-toggle="tooltip"><a href="Projektni zadatak - Srecan ili tuzan.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Projektni zadatak - Prikaz teksta i grafike' data-toggle="tooltip"><a href="Projektni zadatak - Prikaz teksta i grafike.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Projektni zadatak - Srecan ili tuzan' data-toggle="tooltip"><a href="Projektni zadatak - Srecan ili tuzan.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

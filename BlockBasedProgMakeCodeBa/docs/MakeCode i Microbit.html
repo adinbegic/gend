@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Micro:bit – Osnovne karakteristike i komponente &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Blokovi kategorije Basic" href="Blokovi kategorije Basic.html" />
+    <link rel="prev" title="Blokovsko programiranje u MakeCode-u" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="micro-bit-osnovne-karakteristike-i-komponente">
+<h1>Micro:bit – Osnovne karakteristike i komponente<a class="headerlink" href="#micro-bit-osnovne-karakteristike-i-komponente" title="Permalink to this headline">¶</a></h1>
+<p>Pre nego što započnemo priču o programiranju Microbit-a preko MakeCode hajde da se upoznamo sa osnovnim komponentama i karakteristikama Micro:bita i radnim okruženjem.</p>
+<div class="section" id="id1">
+<h2>Micro:bit – Osnovne karakteristike i komponente<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Micro:bit je prenosivi, korisnički programabilni računar koji ima 32-bitni ARM Cortex-M0 procesor koji radi na 16MHz i ima samo 16KB RAM memorije, senzore i ekran koji čine 25 LED diode. Ima konektore, pet ulaza i izlaza (I/O) koji se koriste za povezivanje Micro:bit sa drugim uređajima ili senzorima, ima Bluetooth podršku, napaja se sa dve AA baterije.
+I ono što je najvažnije ima mogućnost programiranja.</p>
+<img alt="_images/0.png" class="align-center" src="_images/0.png" />
+<p>Micro:bit se sastoji od sledećih fizičkih komponenti:
+­</p>
+<ul class="simple">
+<li><p>25 LED dioda koje se mogu pojedinačno programirati</p></li>
+<li><p>2 tastera označena sa A i B koji se mogu programirati</p></li>
+<li><p>pinovi</p></li>
+<li><p>senzori za temperaturu i svetlo</p></li>
+<li><p>senzori pokreta (merač ubrzanja i kompas)</p></li>
+<li><p>bežična komunikacija preko radija i bluethoot</p></li>
+<li><p>USB priključak</p></li>
+<li><p>taster za resetovanje</p></li>
+</ul>
+<p><strong>LED diode</strong></p>
+<a class="reference internal image-reference" href="_images/60.png"><img alt="_images/60.png" class="align-center" src="_images/60.png" style="width: 192px;" /></a>
+<p>LED diode (Light Emitting Diode) su diode koje emituju svetlo. Micro:bit ima 25 LED dioda (smeštenih u mrežu 5x5) koje se mogu pojedinačno programirati i koje zavisno od programa mogu prikazivati određeni tekst, brojeve, figure.</p>
+<p><strong>Tasteri A i B</strong></p>
+<img alt="_images/66.png" class="align-center" src="_images/66.png" />
+<p>Na prednjoj strani Micro:bit nalaze se dva tastera (dugmeta) (označena A i B). Pojedinačnim pritiskom na svako dugme ili istovremenim pritiskom na oba dugmeta pokreće se program na uređaju.</p>
+<p><strong>Pinovi</strong></p>
+<img alt="_images/67.png" class="align-center" src="_images/67.png" />
+<p>Koriste se za povezivanje sa drugim uređajima ili senzorima.</p>
+<p><strong>Senzori za svetlo</strong></p>
+<img alt="_images/63.png" class="align-center" src="_images/63.png" />
+<p>LED diode se nalaze na prednjem delu Micro:bit. One u ovom slučaju igraju ulogu ulaznog uređaja. LED ekran radi kao običan senzor za svetlo koji detektuje intezitet svetlosti u okolini.</p>
+<p><strong>Senzor za temperaturu</strong></p>
+<a class="reference internal image-reference" href="_images/65.png"><img alt="_images/65.png" class="align-center" src="_images/65.png" style="width: 192px;" /></a>
+<p>Senzor za temperaturu omogućava Micro:bit da detektuje trenutnu temperaturu u okolini, u stepenima Celzijusa.</p>
+<p><strong>Akcelerometar</strong></p>
+<img alt="_images/68.png" class="align-center" src="_images/68.png" />
+<p>Akcelerometar  - merač ubrzanja je komponenta koja registruje pokrete tj. promenu u brzini i položaju, odnosno moguće je izmeriti brzinu kretanja. Pomoću ove komponente moguće je registrovati kada se Micro:bit pomeri. Takođe, moguće je detektovati i druge aktivnosti, na primer drhtanje, nagib ili slobodan pad.</p>
+<p><strong>Kompas</strong></p>
+<img alt="_images/68.png" class="align-center" src="_images/68.png" />
+<p>Kompas detektuje Zemljino magnetno polje, što nam daje mogućnost određivanja smera u kojem je okrenut Micro:bit. Kompas pre upotrebe treba da bude kalibrisan. „Kalibrisanjem“ kompasa daje precizne rezultate očitavanja smera. Kada započne kalibracija, Micro:bit će na ekranu prikazati uputstva – „Draw a circle“ („Nacrtaj krug“) ili „Tilt to fill screen“ („Nagni da ispuniš ekran“). Za kalibraciju kompasa treba pratiti data uputstva i naginjati Micro:bit u krug tako da pomeramo tačkicu u sredinu ekrana dok se ne ispiše obris kruga ili dok se ceo ekran ne ispuni tačkama.</p>
+<p><strong>Radio i Bluetooth</strong></p>
+<a class="reference internal image-reference" href="_images/65_.png"><img alt="_images/65_.png" class="align-center" src="_images/65_.png" style="width: 192px;" /></a>
+<p>Komponenta za radio omogućava bežično komuniciranje između dva ili više Micro:bit-ova. Radio možemo koristiti za slanje poruka drugim Micro:bit-ovima, u kreiranju igara ili kvizova za više igrača i slično. BLE (Bluetooth Low Energy) antena omogućava Micro:bit-u da šalje i prima Bluetooth signale, odnosno da bežično komunicira sa računarima, mobilnim telefonima i tabletima.</p>
+<p><strong>USB okruženje</strong></p>
+<img alt="_images/69.png" class="align-center" src="_images/69.png" />
+<p>USB ulaz omogućava da povežemo Micro:bit sa računarom preko mikro USB kabla, koji će napuniti uređaj i omogućiti da na njega preuzimamo programske kodove.</p>
+<div class="section" id="radno-okruzenje">
+<h3>Radno okruzenje<a class="headerlink" href="#radno-okruzenje" title="Permalink to this headline">¶</a></h3>
+<p>Radno okruženje pokrećemo preko brauzera pokretanjem stranice <a class="reference external" href="https://makecode.microbit.org">https://makecode.microbit.org</a>.</p>
+<p>Nov projekat pokrećemo klikom na dugme New Project <a class="reference internal" href="_images/p1.png"><img alt="newproject" src="_images/p1.png" style="width: 90px;" /></a> .</p>
+<p>Ovaj online editor daje mogućnost programiranja u JavaScript-u ili u grafičkom (blokovskom) programiranju gde se naredbe slažu tehnikom „drag and drop“. Mi ćemo se baviti blokovskim programiranjem.</p>
+<p>Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je meni (2) u kome se nalaze grupisane naredbe. Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.</p>
+<p>Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je meni (2) u kome se nalaze grupisane naredbe. Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.</p>
+<img alt="_images/21.png" class="align-center" src="_images/21.png" />
+<p>Kada se pokrene novi projekat na radnoj površini MakeCode se nalaze dva bloka: on start i forever. Blok <img alt="onstart" src="_images/s20.png" /> je jedan od osnovnih blokova, i blokovi u okviru njega se izvršavaju samo jednom dok se program ne zvrši. Dok je blok <img alt="forever" src="_images/s1.png" /> blok u okviru koga će se naredbe izvršavati beskonačan broj puta. Njegovo izvršavanje nikada se ne prekida samostalno. Prekida se klikom na dugme za prestanak rada programa (Stop dugme <img alt="stop" src="_images/p2.png" />).
+U MakeCode, programi su sačinjeni od različitih i međusobno povezanih blokova. Blokovi (naredbe) su podeljeni po kategorijama različitih namena.</p>
+<img alt="_images/3_.png" class="align-center" src="_images/3_.png" />
+<p>Ime kategorije (npr. <code class="docutils literal notranslate"><span class="pre">Music</span></code>) upućuje korisnika na vrste naredbi (blokova) koje se u toj kategoriji mogu naći. Svi blokovi jedne kategorije su iste boje.
+Svaki blok prevlačimo na radnu površinu, a zatim se oni nadovezuju u zavisnosti od programa koji se izrađuje.</p>
+<p>Kada se klikne desnim klikom miša na blok dobija se padajući kategoriju u kome se nalaze opcije za kreiranje duplikata (<code class="docutils literal notranslate"><span class="pre">Duplicate</span></code>), dodavanje komenatar (<code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Comment</span></code>), brisanje bloka (<code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Block</span></code>) i opcije pomoću koje se otvara deo sa informacijama za dodatnu pomoć oko pojedinih blokova (<code class="docutils literal notranslate"><span class="pre">Help</span></code>).</p>
+<img alt="_images/4_.png" class="align-center" src="_images/4_.png" />
+<p>Pre nego što započnemo kreiranje zanimljivih projekata korišćenjem Micro:bit-a pokušaćemo da se upoznamo sa osnovama programiranja u radnom okruženju MakeCode.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Blokovi kategorije Basic.html">Blokovi kategorije Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorije Input.html">Rad sa blokovima iz kategorije Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blokovi iz kategorija Music.html">Blokovi iz kategorija Music</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorije Led.html">Rad sa blokovima iz kategorije Led</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorija Math i Variables.html">Rad sa blokovima iz kategorija Math i Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorija Logic.html">Rad sa blokovima iz kategorija Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorija Loops.html">Rad sa blokovima iz kategorija Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rad sa blokovima iz kategorije Radio.html">Rad sa blokovima iz kategorije Radio</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="projekti">
+<h3>Projekti<a class="headerlink" href="#projekti" title="Permalink to this headline">¶</a></h3>
+<p>U narednim tutorijalima upoznaćemo se sa zanimljivim projektima vezanim za programiranje Micro:bit-a na platformi MakeCode. Svi projekti su urađeni postupno – korak po korak tako da ih svako može ponovo uraditi. Opisani su svi postupci izrade projekta, od načina pravljenja uređaja do izrade programa i njegovog testiranja.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Narukvica.html">Projektni zadatak  - Narukvica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Raspevane vocke.html">Projektni zadatak - Raspevane voćke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Semafor.html">Projektni zadatak  - Semafor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Cuvar kuca.html">Projekat zadatak – Čuvar kuća</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projektni zadatak - Zica.html">Projektni zadatak   - Žica</a></li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Blokovsko programiranje u MakeCode-u' data-toggle="tooltip"><a href="index.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Blokovi kategorije Basic' data-toggle="tooltip"><a href="Blokovi kategorije Basic.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Blokovsko programiranje u MakeCode-u' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Blokovi kategorije Basic' data-toggle="tooltip"><a href="Blokovi kategorije Basic.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

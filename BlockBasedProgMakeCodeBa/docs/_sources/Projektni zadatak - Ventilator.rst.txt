@@ -1,0 +1,69 @@
+===============================
+Projektni zadatak  – Ventilator
+===============================
+
+Ventilator je električni uređaj koji se koristi za protok vazduha u svrhu postizanja određene temperature u prostoriji. Mehanički gledano, ventilator je uređaj koji ima lopaticu ili više njih koje se kružno okreću i koriste za proizvodnju vazdušne struje.
+Često se koristiti za rashlađivanje prostora. Tu njegovu ulogu ćemo iskoristiit da pomoću Micro:bit-a napravimo uređaj koji širi ugodne mirise u prostoriji.
+
+
+Za izradu uređaja Ventilator potrebno je:
+
+
+- 1 Micro:bit
+
+- Servo motor
+
+- Krokodilke
+
+- Žice različitih dužina
+
+- Karton
+
+- Krokodilke
+
+
+Za izradu Ventilator potrebno je najpre uraditi fizički uređaj koji se sastoji od servo-motora (koji će imati ulogu ventilatora) i Micro:bit-a.
+
+Da bi servo-motor radio potrebno mu je napajanje od 3V. Za rad motora potrebno je i uzemljenje, tako da je veza između Micro:bita i servo motora data na donjoj slici:
+
+.. image:: ../_images/_imageMicroBit/tabela.png
+      :align: center
+
+
+Sada kada smo napravili uređaj Ventilator potrebno je napraviti programe za Micro:bit.
+
+**Programiranje**
+
+Potrebno je programirati Micro:bit da pokreće servo-motor.
+
+**Korak 1**
+
+Idite na https://makecode.microbit.org/.
+
+**Korak 2**
+
+Kreirajte novi projekat.
+
+Želimo sada da isprogramiramo pokretanje servo-motora.
+
+**Korak 3**
+
+Želimo da se servo-motor kontinuirano rotira. To ćemo postići u kategoriji ``Advanced - Pins``:
+
+.. image:: ../_images/_imageMicroBit/s69.png
+      :align: center
+
+prevlačenjem bloka |b1|. Ovim blokom će se pomerati osovina standardnog servo-motora za dati ugao ili ćemo podesiti brzinu servo-a sa neprekidnim okretanjem (0 određuje punu brzinu u jednom pravcu, 180 određuje punu brzinu u drugom, a sa 90 nema nikakvog  kretanje).
+
+.. |b1| image:: ../_images/_imageMicroBit/s70.png
+
+Konačan izgled koda:
+
+.. image:: ../_images/_imageMicroBit/s71.png
+      :align: center
+
+Klikom na dugme |dugme1| ili dugme |dugme2| preuzmite .hex fajl na vaš računar. Prevlačenjem fajla na Micro:bit on je spreman za rad.
+
+.. |dugme1| image:: ../_images/_imageMicroBit/s68.png
+.. |dugme2| image:: ../_images/_imageMicroBit/29.png
+      :width: 199px

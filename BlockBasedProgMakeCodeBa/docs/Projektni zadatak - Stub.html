@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projektni zadatak - Stub &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projektni zadatak - Toplo - Hladno" href="Projektni zadatak - Toplo - Hladno.html" />
+    <link rel="prev" title="Projektni zadatak - Koliko ima stabala" href="Projektni zadatak - Koliko ima stabala.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="projektni-zadatak-stub">
+<h1>Projektni zadatak - Stub<a class="headerlink" href="#projektni-zadatak-stub" title="Permalink to this headline">¶</a></h1>
+<p>Slično kao i u prirodi (promena godišnjih doba, kruženje vode u prirodi, dan i noć, plima i oseka,…), i u programiranju je moguće pojedine korake ponoviti više puta. Kao i u prirodi, u programiranju je, za rešavanje pojedinih zadataka, neophodno da se neki delovi programa izvrše više puta. Za takve programe kažemo da sadrže ponavljanja, koje nazivamo <strong>ciklusi</strong>.</p>
+<p>Ponavljanje ćemo demonstirati kreiranjem stuba kvadratnog oblika, čija je osnova kvadrat sa stranicama dužine 5 blokova, a visina 10.
+U Minecraft-u za izvršavanje određenih radnji, kao što su sadnja i žetva, miniranje, seča stabala i gradnja objekata, može se koristiti i <strong>agenta</strong>. Blokovi vezani za rad sa agentom nalaze se u kategoriji <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>:</p>
+<img alt="_images/s510.png" class="align-center" src="_images/s510.png" />
+<p><strong>Faza 1.</strong></p>
+<p>Razmišljanje o problemu: Kretanje napred za 5 blokova i skretanjem na levo i desno (pod uglom od 90 stepeni) kreira se kvadratna osnova. Kretanje po z osi omogućava izradu kule od 10 blokova.</p>
+<p><strong>Faza 2</strong></p>
+<p>Pokreni <code class="docutils literal notranslate"><span class="pre">Code</span> <span class="pre">Builder</span></code> (klikom na taster <code class="docutils literal notranslate"><span class="pre">C</span></code>) i otvoriće se editor prozor u kome je moguće ređati blokove.</p>
+<p>Ovaj problem ćemo podeliti u tri dela:</p>
+<ul class="simple">
+<li><p>postavljamo agenta na određenu poziciju u svetu i opremamo ga određenim alatima za izradu objekata,</p></li>
+<li><p>kreiranje kvadratne osnove stuba,</p></li>
+<li><p>kreiranje stupa po vertikali.</p></li>
+</ul>
+<p>Da bismo postavili agenta na željeno mesto koristimo blok <img alt="chat" src="_images/s71.png" />. Unošenje reči <strong>dođi</strong> postaje okidač za postavljanje agenda na željeno mesto. Za postavljanje agenta na željeno mesto koristimo blok <a class="reference internal" href="_images/s68.png"><img alt="teleport" src="_images/s68.png" style="width: 450px;" /></a> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>. Agenta ćemo postaviti na poziciju našeg lika (igrača) pomeren za dva blok (koraka) na levo. Za to ćemo koristiti promenljivu <strong>pozicija</strong> koje čuvaju trenutnu vrednost pozicije lika (igrača).</p>
+<p>Kreiramo promenljivu <strong>pozicija</strong> u kategoriji <code class="docutils literal notranslate"><span class="pre">Variables</span></code>:</p>
+<img alt="_images/611.png" class="align-center" src="_images/611.png" />
+<p>Na početku vrednost promenljive <strong>pozicije</strong> je trenutni položaj lika u svetu pomeren za 2 bloka u levo.
+Postavljanje početne vrednosti ćemo definisati blokom <a class="reference internal" href="_images/28.png"><img alt="start" src="_images/28.png" style="width: 150px;" /></a>. To znači da svaki put kada se pokrene program Minecraft postavlja vrednost pozicije na željeno mesto (agent je pomeren za dva bloka ulevo od lika (igrača)), i moguće je započeti konstrukciju kvadratne osnove stuba.</p>
+<p>Iz kategorije <code class="docutils literal notranslate"><span class="pre">Variables</span></code> prevlačimo blok <img alt="set" src="_images/s81.png" />, u koji prevlačimo blok kojim dobijamo trenutnu poziciju igrača pomerenu za 2 bloka ulevo.</p>
+<p>Ovo postižemo na sledeći način, korišćenjem bloka:</p>
+<img alt="_images/621.png" class="align-center" src="_images/621.png" />
+<p>iz kategorije <a class="reference internal" href="_images/01.png"><img alt="Position" src="_images/01.png" style="width: 100px;" /></a>.</p>
+<p>U gornji deo bloka prevlačimo blok <img alt="world" src="_images/28.png" /> koji daje trenutnu poziciju lika (igrača) iz kategorije <a class="reference internal" href="_images/42_.png"><img alt="Player" src="_images/42_.png" style="width: 150px;" /></a>. U donjem delu bloka na poziciji x koordinate unosimo broj 2.</p>
+<p>Izgled <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> bloka:</p>
+<img alt="_images/632.png" class="align-center" src="_images/632.png" />
+<p>Da bismo postavili agenta na željeno mesto koristimo blok agent <a class="reference internal" href="_images/s68.png"><img alt="teleport" src="_images/s68.png" style="width: 450px;" /></a> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>. U prvi argument bloka prevlačimo promenljivu <strong>pozicija</strong>, a u drugi iz liste biramo <strong>East (positive X)</strong>.</p>
+<p>Izgled koda:</p>
+<img alt="_images/652.png" class="align-center" src="_images/652.png" />
+<p><strong>Faza 3.</strong></p>
+<p>Testiramo program, klikom na dugme <a class="reference internal" href="_images/151.png"><img alt="Play" src="_images/151.png" style="width: 40px;" /></a>:.</p>
+<img alt="_images/641.png" class="align-center" src="_images/641.png" />
+<p>Da bi agent mogao da postavlja blokove koje želimo moramo da obezbedimo njegov inventar sa predmetima koji su mu potrebni za gradnju stuba. Za to koristimo blok <a class="reference internal" href="_images/s141.png"><img alt="setagent" src="_images/s141.png" style="width: 350px;" /></a> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>:</p>
+<img alt="_images/701.png" class="align-center" src="_images/701.png" />
+<p><strong>Važno:</strong> Inventar, otvara se klikom na taster <code class="docutils literal notranslate"><span class="pre">E</span></code>, igrač koristi za upravljanje predmetima koje poseduje (nosi). Sastoji se iz slotova od 1 do 9 u koje može da „čuva“ predmete koji su mu potrebni za kreiranje različitih objekata.
+Sada treba kreirati kvadratnu osnovu stuba. Da bi agent mogao da kreira kvadratnu osnovu, potreban je neki „okidač“ za taj događaj. Za to ćemo koristiti čet i reč kvadrat.</p>
+<p>Da bismo postavili blokove u kvadratni oblik sa dužinom od 5 blokova koristimo blok <img alt="repeat" src="_images/s101.png" /> iz kategorije <a class="reference internal" href="_images/2_.png"><img alt="Loops" src="_images/2_.png" style="width: 100px;" /></a>.</p>
+<p>Kvadrat je geometrijska figura sastavljena od četiri stranice jednake dužine, pri čemu su naspramne stranice paralelne, a uglovi između susednih stranica su 90o. Kvadrat ima četiri stranice, tako da u bloku ponavljanja unesemo broj <code class="docutils literal notranslate"><span class="pre">4</span></code>:</p>
+<img alt="_images/662.png" class="align-center" src="_images/662.png" />
+<p>Da bi agent postavljao blokove prilikom kretanja po svetu potrebno je da koristimo blok <img alt="placeagent" src="_images/s11.png" /> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>.</p>
+<p>Da bi mogao da izvrši tu radnju u datom bloku je potrebno postaviti drugi argument bloka na <code class="docutils literal notranslate"><span class="pre">true</span></code>:</p>
+<img alt="_images/672.png" class="align-center" src="_images/672.png" />
+<p>Dužinu stranice od 5 blokova definišemo blokom <img alt="move" src="_images/s121.png" /> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>:</p>
+<img alt="_images/682.png" class="align-center" src="_images/682.png" />
+<p>Kako su uglovi kvadrata pod pravim uglom, to obezbeđujemo korišćenjem bloka <img alt="turn" src="_images/s131.png" /> iz kategorije <a class="reference internal" href="_images/s28.png"><img alt="Agent" src="_images/s28.png" style="width: 100px;" /></a>:</p>
+<img alt="_images/692.png" class="align-center" src="_images/692.png" />
+<p>Testiranje programa. Klikom na dugme <a class="reference internal" href="_images/151.png"><img alt="Play" src="_images/151.png" style="width: 40px;" /></a>.</p>
+<img alt="_images/71.png" class="align-center" src="_images/71.png" />
+<p>Nakon testiranja može se uočiti da agent nije konstruisao ceo pun kvadrat.</p>
+<p>Da bismo to postigli potrebno je da pomerimo agenta. To postižemo uvođenjem bloka <img alt="move" src="_images/s121.png" /> i iz padajuće liste izborom opcije <code class="docutils literal notranslate"><span class="pre">up</span></code>. Agenta pomeramo za jedan blok pa postavljamo vrednost trećef parametra na <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
+<img alt="_images/73.png" class="align-center" src="_images/73.png" />
+<p>Sada ponovo testiramo program i dobijamo kvadrat:</p>
+<img alt="_images/72.png" class="align-center" src="_images/72.png" />
+<p>Na osnovu gornjeg koda vidimo da agent nije na poziciji za blok iznad početne pozicije. Da bismo agenta postavili na željeno mesto uvodimo dva bloka <img alt="turn" src="_images/s131.png" /> i <img alt="move" src="_images/s121.png" />:</p>
+<img alt="_images/741.png" class="align-center" src="_images/741.png" />
+<p>Testiranjem programa možemo da primetimo da agent po završetku kretanja ostavlja blok. To ne želimo da se desi. Zbog toga uvodimo još dva bloka kojim se agent postavlja bez bloka na poziciji za kreiranje zida:</p>
+<img alt="_images/751.png" class="align-center" src="_images/751.png" />
+<p>Ostaje nam sada da isprogramiramo kreiranje stuba visine 10 blokova.</p>
+<p>To postižemo uvođenjem nove petlje u koju će biti prevučena već kreirana petlja (kojom se kreiran kvadrat). Uvodimo blok <img alt="repeat" src="_images/s101.png" /> i postavljamo vrednost brojača na <code class="docutils literal notranslate"><span class="pre">10</span></code>:</p>
+<p>Postavljanje jedne petlje unutar tela druge petlje zove se <strong>ugneždavanje</strong>.</p>
+<img alt="_images/771.png" class="align-center" src="_images/771.png" />
+<p>Konačan izgled koda kojim kreiramo kulu visine 10 blokova, sa osnovom kvadrata 5x5:</p>
+<img alt="_images/781.png" class="align-center" src="_images/781.png" />
+<p><strong>Faza 3</strong></p>
+<p>Testiranje programa.
+Klikom na dugme <a class="reference internal" href="_images/151.png"><img alt="Play" src="_images/151.png" style="width: 40px;" /></a> .</p>
+<img alt="_images/761.png" class="align-center" src="_images/761.png" />
+<p>Na ovaj način je kreiran stub visine 10 blokova i širine 5x5.</p>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Projektni zadatak - Koliko ima stabala' data-toggle="tooltip"><a href="Projektni zadatak - Koliko ima stabala.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Projektni zadatak - Toplo - Hladno' data-toggle="tooltip"><a href="Projektni zadatak - Toplo - Hladno.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Projektni zadatak - Koliko ima stabala' data-toggle="tooltip"><a href="Projektni zadatak - Koliko ima stabala.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Projektni zadatak - Toplo - Hladno' data-toggle="tooltip"><a href="Projektni zadatak - Toplo - Hladno.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

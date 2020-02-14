@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projektni zadatak - Semafor &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projekat zadatak – Čuvar kuća" href="Projektni zadatak - Cuvar kuca.html" />
+    <link rel="prev" title="Projektni zadatak - Raspevane voćke" href="Projektni zadatak - Raspevane vocke.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="projektni-zadatak-semafor">
+<h1>Projektni zadatak  - Semafor<a class="headerlink" href="#projektni-zadatak-semafor" title="Permalink to this headline">¶</a></h1>
+<p>Semafor je svetlosni uređaj i ima veoma važnu ulogu u regulisanju saobraćaja. Uglavnom su postavljeni na raskrsnicama.</p>
+<img alt="_images/semafor.jpg" class="align-center" src="_images/semafor.jpg" />
+<p>Prvi semafor je postavljen 10. decembra 1868. godine u Londonu, a konstruisao ga je Džon Pik Najt (engl. John Peake Knight). Ovaj semafor je kontrolisan ručno, od strane policajca. 1917. godine u Solk Lejk Sitiju se prvi put pojavljuju semafori sa preklopnicima. Prvi automatizovani semafor sa tajmerom se pojavio u Americi u Hjustonu, 1922. godini, a u Evropi u Engleskoj 1927. godine. Prvi semafor u Srbiji postavljen je u Beogradu na raskrsnici ulica Kralja Aleksandra, Kralja Ferdinanda (današnja Ulica Kneza Miloša) i Takovske, 4. decembra 1939.</p>
+<p>Boja, oblik i veličina svetlosne signalizacije na semaforu je određena međunarodnim standardima:</p>
+<p>­
+- stoj – crveno</p>
+<ul class="simple">
+<li><p>priprema za polazak – istovremeno crveno i žuto</p></li>
+<li><p>dozvoljen prolazak – zeleno</p></li>
+<li><p>nagoveštaj zabrane prolaska – žuto.</p></li>
+</ul>
+<p>Uključivanje i isključivanje boja date su u određenom redosledu, tačnije u određenim vremenskim intervalima.</p>
+<p>Koristeći Micro:bit napravićemo semafor kome se kao i kod pravih semafora uključuju crveno, žuto i zeleno svetlo u određenom vremenskom intervalu.</p>
+<p>Za izradu Semafora potrebno je:</p>
+<ul class="simple">
+<li><p>1 Micro:bit</p></li>
+<li><p>protobord</p></li>
+<li><p>stirodur</p></li>
+<li><p>3 diode (crvena, zelena i žuta)</p></li>
+<li><p>3 otpornika</p></li>
+<li><p>4 krokodilke</p></li>
+<li><p>4 žice različitih dužina.</p></li>
+</ul>
+<p>Pre nego što započnemo sa povezivanjem Micro:bit-a sa diodama podsetićemo se da Micro:bit ima 25 pinova, tačnije ima pet velikih pinova: 0, 1, 2, 3V i GND. Ostalih 20 pinova možemo koristiti za povezivanje sa dodatnim uređajima.</p>
+<img alt="_images/67.png" class="align-center" src="_images/67.png" />
+<p>Micro:bit korišćenjem žičica/krokodilki povezujemo preko GND na bilo koji pin na protobordu kako bismo mogli da ga povežemo sa GND diode.</p>
+<p>Za rad diode potrebno je napajanje, pa ćemo napajanje struje ograničiti korišćenjem otpornika (obezbeđuje određen otpor koji ograničava protok struje i kontroliše napon u kolu).</p>
+<p>Na slici ispod prikazana je veza Micro:bit-a i jedne Led diode:</p>
+<img alt="_images/semafor1.png" class="align-center" src="_images/semafor1.png" />
+<p>Povezujemo Micro:bit preko pina P0 i pina na protobordu sa leve strane otpornika (slika). Dužu nožicu (+) svetleće diode povezujemo preko krokodilki na pin P0 na Micro:bit-u, a kraću (-) preko krokodilki na pin GND (kao na slici ispod).</p>
+<p>Na isti način povezujemo ostale dve Led diode.</p>
+<img alt="_images/semafor2.png" class="align-center" src="_images/semafor2.png" />
+<p>Ovu logiku povezivanja ćemo koristi kako bismo fizički napravili semafor od stirodura.</p>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="PravljenjeSemafora_vid"></div>
+    </div>
+    <script id="PravljenjeSemafora_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('PravljenjeSemafora_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('PravljenjeSemafora_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'PravljenjeSemafora',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p><strong>Programiranje</strong></p>
+<p>Potrebno je da isprogramiramo uključivanje i isključivanje led dioda.</p>
+<p><strong>Korak 1</strong></p>
+<p>Idite na <a class="reference external" href="https://makecode.microbit.org/">https://makecode.microbit.org/</a>.</p>
+<p><strong>Korak 2</strong></p>
+<p>Kreirajte novi projekat.</p>
+<p>Sada želimo da isprogramiramo uključivanje i isključivanje dioda.</p>
+<p><strong>Korak 3</strong></p>
+<p>Da bismo isprogramirali uključivanje i isključivanje diode, iz kategorije <img alt="Basic" src="_images/s2.png" /> u blok <img alt="forever" src="_images/s1.png" /> prevlačimo blok <img alt="digital" src="_images/s37.png" /> iz kategorije <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">-</span> <span class="pre">Pins</span></code> .</p>
+<p>Da bi se lampica upalila u prostor <img alt="blokcic" src="_images/s38.png" /> treba uneti vrednost 1. Ako je vrednost postavljena na nulu lampica će se ugasiti.</p>
+<img alt="_images/s41.png" class="align-center" src="_images/s41.png" />
+<p>Prilikom paljenja i gašenja potrebno je postaviti neki vremenski interval u okviru koga se dešavaju promene.
+Neka lampica bude uključena 4 sekunde, a isključena 2 sekunde. Za to koristimo blok <img alt="b1" src="_images/s39.png" /> iz kategorije <code class="docutils literal notranslate"><span class="pre">Basic</span></code>. U polje <img alt="b2" src="_images/s40.png" /> unosimo 4000 ms (što je 4 sekunde) za upaljenu lampicu, i 2000 za isključenu lampicu.</p>
+<p>Konačan izgled koda semafora:</p>
+<img alt="_images/s42.png" class="align-center" src="_images/s42.png" />
+<p>Klikom na dugme <img alt="dugme1" src="_images/s43.png" /> ili dugme <a class="reference internal" href="_images/29.png"><img alt="dugme2" src="_images/29.png" style="width: 199px;" /></a> preuzmite .hex fajl na vaš računar. Prevlačenjem fajla na Micro:bit on je spreman za rad.</p>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="Semafor_vid"></div>
+    </div>
+    <script id="Semafor_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('Semafor_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('Semafor_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'Semafor',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    </div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Projektni zadatak - Raspevane voćke' data-toggle="tooltip"><a href="Projektni zadatak - Raspevane vocke.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Projekat zadatak – Čuvar kuća' data-toggle="tooltip"><a href="Projektni zadatak - Cuvar kuca.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Projektni zadatak - Raspevane voćke' data-toggle="tooltip"><a href="Projektni zadatak - Raspevane vocke.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Projekat zadatak – Čuvar kuća' data-toggle="tooltip"><a href="Projektni zadatak - Cuvar kuca.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

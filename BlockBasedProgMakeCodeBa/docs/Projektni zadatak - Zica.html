@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projektni zadatak - Žica &#8212; Blokovsko programiranje u MakeCode-u</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EV3 – Osnovne karakteristike i komponente" href="MakeCode i EV3.html" />
+    <link rel="prev" title="Projekat zadatak – Čuvar kuća" href="Projektni zadatak - Cuvar kuca.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u MakeCode-u</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="projektni-zadatak-zica">
+<h1>Projektni zadatak   - Žica<a class="headerlink" href="#projektni-zadatak-zica" title="Permalink to this headline">¶</a></h1>
+<p>Probleme sa motorikom (usporenom reakcijom ili nespretnošću za obavljanje neke aktivnosti) srećemo skoro svakodnevno. Dosta poslova sadašnjosti zahtevaju mirnu ruku. Tako na primer, arhitekte, zavarivači, zubari i hirurzi moraju da imaju „mirnu“ ruku kako bi njihov rad bio što uspešniji. Posebno je izražen problem sa motorikom kod ruke koja nije dominantna.</p>
+<p>Istraživanja pokazuju da u svetu 96% ljudi koristi desnu ruku (desnoruko je). Kod većine ovih ljudi leva ruka je potpuno zanemarena i sa njom veoma malo preciznih radnji mogu da urade.</p>
+<p>Jedan od načina da se ovaj problem prevaziđe jeste uređaj Žica uz pomoć koje osoba vežba svoju motoriku, tako što od uređaja dobija povratnu informaciju o uspešnosti izvršavanja zadatka. Pomoću ovog uređaja svako može da vežba koncentraciju i motoriku ruke. U zavisnosti od povratne informacije korisnik može da utvrdi da li je spretan ili ima problem sa motorikom pa mora više da vežba.</p>
+<p>Za izradu uređaja Žica potrebno je:</p>
+<ul class="simple">
+<li><p>4 Micro:bit</p></li>
+<li><p>Krokodilke</p></li>
+<li><p>Žice različitih dužina</p></li>
+<li><p>Drvena podloga ili stirodur</p></li>
+<li><p>Zvučnik ili slušalice</p></li>
+<li><p>Štipaljka (kukica)</p></li>
+</ul>
+<p>Za izradu Žice potrebno je najpre uraditi fizički uređaj koji se sastoji od žice na kojoj ćemo vežbati svoju motoriku, drvene (ili neke druge) podloge i Micro:bit-ova.</p>
+<a class="reference internal image-reference" href="_images/z4.jpg"><img alt="_images/z4.jpg" class="align-center" src="_images/z4.jpg" style="width: 500px;" /></a>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="Izradauredjajazica_vid"></div>
+    </div>
+    <script id="Izradauredjajazica_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('Izradauredjajazica_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('Izradauredjajazica_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'Izradauredjajazica',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p><strong>Postupak povezivanja Micro:bit-ova</strong></p>
+<p>Sada kada smo se upoznali sa osnovnim komponentama i karakteristikama Micro:bit, možemo nastaviti dalje sa konstrukcijom uređaja Žica. Na konstrukciju sada treba da povežemo Micro:bit-ove korišćenjem krokodilki.
+Prvi Micro:bit povezujemo tako što uzemljenje (GND) povezujemo sa žicom pomoću krokodilki.
+Slika ispod pokazuje vezu između uzemljenja i Micro:bit (samo za jedan uređaj).</p>
+<a class="reference internal image-reference" href="_images/z3.jpg"><img alt="_images/z3.jpg" class="align-center" src="_images/z3.jpg" style="width: 500px;" /></a>
+<p>Pored toga potrebno je povezati Micro:bit sa delom uređaja kojim se proverava morotika (kukica).
+Sada kada smo napravili uređaj Žica potrebno je napraviti programe za svaki od  Micro:bit.</p>
+<a class="reference internal image-reference" href="_images/z5.jpg"><img alt="_images/z5.jpg" class="align-center" src="_images/z5.jpg" style="width: 500px;" /></a>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="PovezivanjeuredjajaZica_vid"></div>
+    </div>
+    <script id="PovezivanjeuredjajaZica_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('PovezivanjeuredjajaZica_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('PovezivanjeuredjajaZica_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'PovezivanjeuredjajaZica',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    <p><strong>Programiranje</strong></p>
+<p>Potrebno je programirati zasebno sva četiri Micro:bit-a:
+­
+1. Jedan ima ulogu detektovanja i brojanja grešaka koje korisnik napravi
+2. ­Drugi se koristi da se preko njega pokrene vreme
+3. ­Treći meri vreme
+4. ­Četvrti se koristi za puštanje zvuka kada korisnik napravi grešku.</p>
+<p><strong>Korak 1</strong></p>
+<p>Idite na <a class="reference external" href="https://makecode.microbit.org/">https://makecode.microbit.org/</a>.</p>
+<p><strong>Korak 2</strong></p>
+<p>Kreirajte novi projekat.
+Želimo sada da isprogramiramo detekciju greške, tačnije želimo da pomoću Micro:bit-a registrujemo kada kukica dodirne glavnu žicu.
+Na osnovu napravljenog fizičkog uređaja Žica, možemo zaključiti da je pin <code class="docutils literal notranslate"><span class="pre">P0</span></code> „okidač“ svih događaja.</p>
+<p>Kako je pin <code class="docutils literal notranslate"><span class="pre">P0</span></code> vezan pomoću krokodilki za kukicu dodirom glavne žice detektuje se greška i na Micro:bit-u treba da se pojavi krstić (programiramo detekciju greške).</p>
+<p><strong>Korak 3</strong></p>
+<p>Izaberi iz kategorije <img alt="Input" src="_images/s6.png" /> blok <img alt="press" src="_images/310.png" /> i iz padajuće liste izaberite pin <code class="docutils literal notranslate"><span class="pre">P0</span></code>.</p>
+<p>Ovaj blok će nam biti „okidač“ vizuelnog prikazivanja greške.</p>
+<p><strong>Korak 4</strong></p>
+<p>Sada je potrebno dodati blok za prikaz krstića na ekranu koji će se pojaviti kada korisnik pomoću kukice dotakne glavnu žicu.
+Izaberite <img alt="Basic" src="_images/s2.png" /> i blok <img alt="leds" src="_images/s12.png" />.</p>
+<p>Izgled koda i simulator greške:</p>
+<img alt="_images/4_5.png" class="align-center" src="_images/4_5.png" />
+<p>U kodu ćemo dodati blok za pauzu kojim osiguravamo pravovremeno odazivanje sistema (uređaja Žica).
+Izaberite kategoriju <img alt="Basic" src="_images/s2.png" /> i blok <img alt="Pause" src="_images/s39.png" /> u kome postavljate vreme u milisekundama (1000 milisekundi = 1 sekunda).</p>
+<p>Izgled koda:</p>
+<img alt="_images/710.png" class="align-center" src="_images/710.png" />
+<p><strong>Korak 5</strong></p>
+<p>Gornji deo koda samo prikazuje detekciju greške koja nastaje kada kukica dotakne glavnu žicu.</p>
+<p>Sada ćemo dodati deo kojim ćemo brojati koliko puta je korisnik napravio grešku. Da bi ovaj zahtev mogao da bude ispunjen, moramo da pronađemo način da čuvamo i po potrebi menjamo vrednost brojača grešaka koje korisnik pravi.
+Rešenje za ovaj problem jeste uvođenje <strong>promenljive</strong>.</p>
+<p>Promenljivu možeš da shvatiš kao prostor u memoriji računara, sličan kutiji, u kome se, za vreme izvršavanja programa, čuvaju neke međuvrednosti.
+Promenljive imaju svoja imena. Kada u programu želiš da koristiš vrednost promenljive, dovoljno je da navedeš  njeno ime.</p>
+<p>Promenljivu kreiraš tako što, u kategoriji Variables (1), klikneš na dugme Make a variable (Napravi promenljivu) (2) i u polje uneseš ime promenljive (3), u našem slučaju Brojač. Klikom na dugme OK (4), kreirana je promenljiva (5).</p>
+<img alt="_images/s29.png" class="align-center" src="_images/s29.png" />
+<p><strong>Korak 6</strong></p>
+<p>Na početku „treninga“ vrednost brojača biće nula. Postavljanje početne vrednosti (resetovanje na početnu vrednost) ćemo definisati tako što korisnik pritisne taster (dugme) A. To znači da kada korisnik pritisne dugme A na Micro:bit-u vrednost brojača se postavlja na nulu, i moguće je započeti brojanje grešaka.</p>
+<p>Izaberi iz kategorije <img alt="Input" src="_images/s6.png" /> blok <img alt="Button" src="_images/131.png" /> i iz padajuće liste birate dugme A.</p>
+<p>Ovaj blok će nam biti „okidač“ resetovanja promenljive <strong>Brojač</strong>.</p>
+<p>Iz kategorije <code class="docutils literal notranslate"><span class="pre">Variables</span></code> prevlačimo blok <img alt="set" src="_images/142.png" />.</p>
+<p>Ovaj blok spajamo sa gornjim blokom i blokom za prikaz vrednosti promenljive. (Iz kategorije <img alt="Basic" src="_images/s2.png" /> biram blok <img alt="prikaz" src="_images/15.png" /> u kome iz kategorije <code class="docutils literal notranslate"><span class="pre">Variables</span></code> prevlačim blok <img alt="brojac" src="_images/162.png" /> na mesto broja 0.
+Dobijamo blok kojim se prikazuje vrednost promenljive <strong>Brojač</strong>.</p>
+<p>Izgled dela koda za resetovanje i prikaz promenljive <strong>Brojač</strong>:</p>
+<img alt="_images/181.png" class="align-center" src="_images/181.png" />
+<p><strong>Korak 7</strong></p>
+<p>Kreiranu promenljivu <strong>Brojač</strong>, čiju početnu vrednost smo postavili na nulu, sada treba da iskoristimo, na taj način što će se njena vrednost menjati (uvećavati za jedan) svaki put kada korisnik napravi grešku, tačnije kada kukica dotakne glavnu žicu.
+Za to ćemo koristiti iz kategorije <code class="docutils literal notranslate"><span class="pre">Variables</span></code> blok <img alt="change" src="_images/192.png" />.</p>
+<p>Ovaj blok ćemo prevući u deo koda u kome smo detektovali grešku prikazom znaka x.</p>
+<p>Izgled koda i izvršavanje koda na simulatoru:</p>
+<img alt="_images/202122.png" class="align-center" src="_images/202122.png" />
+<p><strong>Korak 8</strong></p>
+<p>U sledećem koraku želimo da unapredimo projekat tako što će se svaki put kada korisnik dotakne glavnu žicu čuti zvuk.</p>
+<p>Za to je potrebno da napravimo vezu između dva Micro:bit-a, tačnije da iskoristimo mogućnost radio komunikacije između njih. Najpre je potrebno kreirati ID grupe koji se koristi za „kreiranje“ prostora u kome će u našem slučaju komunicirati dva Micro:bit-a. Za kreiranje ID grupe koristi se blok <img alt="radioset" src="_images/232.png" /> iz kategorije <img alt="Radio" src="_images/s21.png" />. Može se uneti bilo koji broj. Mi ćemo ostaviti da je ID grupe 1. Ovaj blok postavljamo u okviru bloka <img alt="Forever" src="_images/s2.png" /> iz kategorije <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Deo koda kojim se kreira grupa za komunikaciju:</p>
+<img alt="_images/241.png" class="align-center" src="_images/241.png" />
+<p>Da bi se poslao radio signal drugom uređaju koji će na osnovu toga „odreagovati“ tako da se čuje zvuk nakon načinjene greške, potrebno je u deo koda za detektovanje i brojanje grešaka uvesti blok  .</p>
+<p>Dopunjeni kod za detektovanje i brojanje grešaka:</p>
+<img alt="_images/261.png" class="align-center" src="_images/261.png" />
+<p>Ceo kod za prvi Micro:bit:</p>
+<img alt="_images/272.png" class="align-center" src="_images/272.png" />
+<p>Klikom na dugme <img alt="dugme1" src="_images/282.png" /> ili dugme <a class="reference internal" href="_images/29.png"><img alt="dugme2" src="_images/29.png" style="width: 199px;" /></a> preuzmite .hex fajl na vaš računar. Prevlačenjem fajla na Micro:bit on je spreman za rad.</p>
+<p><strong>Korak 9</strong></p>
+<p>Sledeći korak je da se kreira program za drugi Micro:bit kojim će se kontrolisati zvuk svaki put kada korisnik napravi grešku.
+Naša dva Micro:bit-a treba da komuniciraju u prostoru sa ID grupom 1.</p>
+<p>Postavljamo blok <img alt="radioset" src="_images/232.png" /> iz kategorije <img alt="Radio" src="_images/s21.png" /> u okviru bloka <img alt="Forever" src="_images/s2.png" /> iz kategorije <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Deo koda kojim se kreira grupa za komunikaciju:</p>
+<img alt="_images/241.png" class="align-center" src="_images/241.png" />
+<p>Sledeći korak je da ovaj Micro:bit primi informaciju (u našem slučaju broj) na osnovu koje će da „odreaguje“ tako što će se čuti zvuk. Za to ćemo iz kategorije <img alt="Radio" src="_images/s21.png" /> prevući blok:</p>
+<img alt="_images/30.png" class="align-center" src="_images/30.png" />
+<p>U njega ćemo prevući blok <img alt="Play" src="_images/31_.png" /> iz kategorije <img alt="Music" src="_images/s66.png" /> kojim se reprodukuje zvuk.
+U datom bloku iz padajućih lista biramo ton i dužinu istog.</p>
+<img alt="_images/3132.png" class="align-center" src="_images/3132.png" />
+<p>Izgled koda za reprodukciju zvuka:</p>
+<img alt="_images/331.png" class="align-center" src="_images/331.png" />
+<p><strong>Napomena</strong>: Da bi zvuk mogao da se reprodukuje Micro:bit mora da bude povezan sa zvučnicima ili slušalicama na sledeći način:</p>
+<img alt="_images/34.png" class="align-center" src="_images/34.png" />
+<p>Ceo kod za Micro:bit kome se aktivira zvuk:</p>
+<img alt="_images/351.png" class="align-center" src="_images/351.png" />
+<p>Na ovaj način smo kreirali detektovanje, brojanje i oglašavanje greške koju korisnik napravi kada dotakne glavnu žicu.</p>
+<p><strong>Korak 10</strong></p>
+<p>Da bismo kreirali uređaj koji će da meri vreme za koje korisnik završi „vežbanje“ svoje motorike potrebno je da uvedemo još dva Micro:bit-a od kojih će jedan da bude samo „okidač“ za pokretanje vremena na drugom Micro:bit-u.</p>
+<p>Klikom na taster (dugme) A resetuje se uređaj i briše ekran. Opcija <code class="docutils literal notranslate"><span class="pre">reset</span></code> se nalazi u kategorijuju <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">-</span> <span class="pre">Control</span></code> .</p>
+<p>Opcija brisanja ekrana nalazi se u podkategorijuju More kategorije <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Deo koda:</p>
+<img alt="_images/371.png" class="align-center" src="_images/371.png" />
+<p>Zatim, kreiramo prostora za komunikaciju sa ID-om 50:</p>
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
+<p>Pin <code class="docutils literal notranslate"><span class="pre">P1</span></code> je pin za koji je putem krokodilke zakačena kukica.
+Ovaj pin će se koristiti kao „pokretač“ vremena. Tačnije, dodirom kukice na žicu počinje da se šalje radio signal kojim se pokreće vreme. Ujedno da bi korisnik video da je vreme krenulo da se meri na ekranu Micro:bit-a se pojavljuje slika <img alt="slika" src="_images/37_.png" />.</p>
+<p>Ceo kod za Micro:bit kojim se signalizira početak merenja vremena.</p>
+<img alt="_images/391.png" class="align-center" src="_images/391.png" />
+<p><strong>Korak 11</strong></p>
+<p>Potrebno je da definišemo dve promenljive:</p>
+<ul class="simple">
+<li><p>promenljivu <strong>Vreme</strong> pomoću koje se meri vreme od početka „igre“. Igra počinje primanjem signala od predhodnog Micro:bit-a.</p></li>
+<li><p>promenljiva <strong>Brojač</strong> koja ima dve moguće vrednosti true i false – dotaknuta je žica ili ne.</p></li>
+</ul>
+<p>Klikom na taster (dugme) A resetuje se uređaj i postavljaju se početne vrednosti promenljivih <strong>Vreme</strong> i <strong>Brojač</strong>.
+Vrednosti za promenljivu <strong>Brojač</strong> možemo naći u kategorijuju <img alt="Logic" src="_images/s4.png" />:</p>
+<img alt="_images/401.png" class="align-center" src="_images/401.png" />
+<p>Sledeći korak je kreiranje prostora za komuniciraju sa ID grupom 50:</p>
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
+<p>Pin <code class="docutils literal notranslate"><span class="pre">P1</span></code> je pin za koji je putem krokodilke zakačena kukica. Ovaj pin će se koristiti kao „pokretač“ vremena:</p>
+<img alt="_images/411.png" class="align-center" src="_images/411.png" />
+<p>Kada korisnik klikne na dugme B prikazuje se vreme koje je bilo potrebno da korisnik završi „trening“:</p>
+<img alt="_images/422.png" class="align-center" src="_images/422.png" />
+<p>Kada Micro:bit prihvati radio signal (broj) od drugog Micro:bit-a započinje postupak merenja vremena i promene vrednosti promenljive <strong>Vreme</strong> za 1, nakon svake sekunde sve dok se ne prekine „trening“:</p>
+<img alt="_images/432.png" class="align-center" src="_images/432.png" />
+<p>Ceo kod za Micro:bit kojim se meri vreme od početka „igre“:</p>
+<img alt="_images/43_.png" class="align-center" src="_images/43_.png" />
+<p>Kada se prebace svi kodovi na Micro:bit-ove možemo „testirati“ našu motoriku i trenirati slabiju ruku.</p>
+
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
+    <div id="Zica_vid"></div>
+    </div>
+    <script id="Zica_script">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var ytScriptTag = document.getElementById('Zica_script');
+      ytScriptTag.parentNode.insertBefore(tag, ytScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('Zica_vid', {
+          height: '415',
+          width: '735',
+          videoId: 'Zica',
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+    </script>
+    </div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Projekat zadatak – Čuvar kuća' data-toggle="tooltip"><a href="Projektni zadatak - Cuvar kuca.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - EV3 – Osnovne karakteristike i komponente' data-toggle="tooltip"><a href="MakeCode i EV3.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Projekat zadatak – Čuvar kuća' data-toggle="tooltip"><a href="Projektni zadatak - Cuvar kuca.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - EV3 – Osnovne karakteristike i komponente' data-toggle="tooltip"><a href="MakeCode i EV3.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
